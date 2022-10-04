@@ -78,4 +78,12 @@ def sql():
 
 conn = sqlite3.connect('orders.db')
 cur = conn.cursor()
-sql()
+
+while True:
+    a=int(input('Введите 1, если хотите заполнить базу данных \nВведите 2, если хотите получить данные баззы данных \nВведите 3, чтобы выйти из прогроаммы \n'))
+    if a==1:
+        create()
+    elif a==2: 
+        sql()
+    else:
+        break
